@@ -7,18 +7,23 @@
     tools:context=".GratitudeHistoryActivity">
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/textViewHeader1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="@string/gratitude"
+        app:layout_constraintEnd_toStartOf="@+id/textViewHeader2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/textViewHeader2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="327dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:layout_marginStart="147dp"
+        android:text="@string/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewHeader1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listViewGratitude"
