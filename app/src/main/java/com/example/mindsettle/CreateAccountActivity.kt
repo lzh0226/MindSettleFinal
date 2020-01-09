@@ -149,11 +149,11 @@ class CreateAccountActivity : AppCompatActivity() {
                         }
                     }
                 } catch (e: Exception) {
-                    Log.d("Main", "Response: %s".format(e.message.toString()))
+                    Log.d("Main", "ResponseGoal: %s".format(e.message.toString()))
                 }
             },
             Response.ErrorListener { response ->
-                Log.d("Main", "Response: %s".format(response.message.toString()))
+                Log.d("Main", "ResponseGoal: %s".format(response.message.toString()))
             }
         )
 
@@ -202,12 +202,12 @@ class CreateAccountActivity : AppCompatActivity() {
                         ).show()
                     }
                 } catch (e: Exception) {
-                    Log.d("Main", "Response: %s".format(e.message.toString()))
+                    Log.d("Main", "ResponseGoal: %s".format(e.message.toString()))
 
                 }
             },
             Response.ErrorListener { error ->
-                Log.d("Main", "Response: %s".format(error.message.toString()))
+                Log.d("Main", "ResponseGoal: %s".format(error.message.toString()))
             }
         )
 

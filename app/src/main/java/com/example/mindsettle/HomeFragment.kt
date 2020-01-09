@@ -82,6 +82,14 @@ class HomeFragment : Fragment() {
                 createMood(userMood, editTextComment.text.toString())
             }
         }
+
+        val buttonViewSummary : Button = view.findViewById(R.id.buttonViewSummary)
+        buttonViewSummary.setOnClickListener {
+            val activity = activity as Main2BottomActivity
+            val intent = Intent(activity, CheckInSummaryActivity::class.java)
+            activity.startActivity(intent)
+        }
+
         return view
     }
 
@@ -117,11 +125,11 @@ class HomeFragment : Fragment() {
                         }
                     }
                 } catch (e: Exception) {
-                    Log.d("Main", "Response: %s".format(e.message.toString()))
+                    Log.d("Main", "ResponseGoal: %s".format(e.message.toString()))
                 }
             },
             Response.ErrorListener { response ->
-                Log.d("Main", "Response: %s".format(response.message.toString()))
+                Log.d("Main", "ResponseGoal: %s".format(response.message.toString()))
             }
         )
 
